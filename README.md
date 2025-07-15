@@ -1,7 +1,7 @@
 # Nitro5-2018_AN515-53_OpenCore
 My macOS Sonoma OpenCore EFI files and some others. Change SMBIOS serials if you are re-using.<br>
 
-<img width="961" height="1280" alt="image" src="https://github.com/user-attachments/assets/c8a823b9-1ec3-4f52-9783-ebf07c66cd09" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/543e5c1c-0907-4a15-ad14-a3c200279afe" />
 
 ## Specs:
 | Component      | Description |
@@ -20,8 +20,6 @@ My macOS Sonoma OpenCore EFI files and some others. Change SMBIOS serials if you
 | Audio | Realtek ALC225 (Layout 30) |
 | OS | macOS Sonoma 14.7.6 + Windows 11 24H2 + Endeavour OS |
 | OpenCore | v1.0.0 |
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/543e5c1c-0907-4a15-ad14-a3c200279afe" />
 
 ## What Works?
 - All USB Ports including Type-C
@@ -56,6 +54,9 @@ My macOS Sonoma OpenCore EFI files and some others. Change SMBIOS serials if you
 Just as the original Readme, I have no idea. I literally forked the efforts of [sameerasw](https://github.com/sameerasw) from his repo. The hardware of both variants of the AN515-53 and AN515-53 are quite similar, this helped with the compatibility of the EFI files. The first thing to do to make it boot was disable the SecureBootModel, or else it would have a Recovery Reboot. These changes would alllow me to boot Ventura.
 To have Sonoma 14.4+ compatibility, first, updated the AirportItlwm.kext to the corresponding version for Sonoma 14.4+. Also replaced USBPorts.kex with USBToolBox.kext and UTBMap.kext (from Windows I generatedd the UTBMap).
 Currently Bluetooth is broken. I don't use it that much so I may or may not fix it.
+
+<img width="961" height="1280" alt="image" src="https://github.com/user-attachments/assets/c8a823b9-1ec3-4f52-9783-ebf07c66cd09" />
+
 ## Credits and ref
 - [sameerasw's repo](https://github.com/sameerasw/Nitro5-2018_AN515-52_OpenCore)
 - [Thread on tonymacx86.com](https://www.tonymacx86.com/threads/guide-oc-monterey-acer-nitro-5-an515-52-core-i7-8750h-samsung-1tb-960-evo-pcie-nvme.319629/)
