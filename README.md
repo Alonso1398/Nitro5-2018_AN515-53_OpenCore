@@ -1,4 +1,4 @@
-# Nitro5-2018_AN515-52_OpenCore
+# Nitro5-2018_AN515-53_OpenCore
 My macOS Sonoma OpenCore EFI files and some others. Change SMBIOS serials if you are re-using.<br>
 
 ## Specs:
