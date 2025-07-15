@@ -1,38 +1,29 @@
 # Nitro5-2018_AN515-52_OpenCore
 My macOS Sonoma OpenCore EFI files and some others. Change SMBIOS serials if you are re-using.<br>
-More about the hackintosh : [Notes](https://hackbook.simple.ink/) & [Setup](https://sameerasw.com/macos)
-
-```diff
-- Update: Sold my Nitro 5 recently for an actual macBook upgrade so this will no longer be updated.
-+ It was fun <3
-```
-![image](https://github.com/sameerasw/Nitro5-2018_AN515-52_OpenCore/assets/68902530/eb8dd4f7-21da-4069-99b8-48beec41e414)
-
-![image](https://github.com/sameerasw/Nitro5-2018_AN515-52_OpenCore/assets/68902530/88e07046-f1b0-479a-8f08-95abd719b2d5)
 
 ## Specs:
 | Component      | Description |
 | ----------- | ----------- |
-| Device      | Acer Nitro 5 (2018) AN515-52       |
-| CPU   | Intel 8th Gen i7+ (I don't know why it's labeled with +) 8750H        |
-| Chipset | Intel H370 (Coffee Lake) |
+| Device      | Acer Nitro 5 (2018) AN515-53       |
+| CPU   | Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz        |
+| Chipset | Intel HM370 (Coffee Lake) |
 | RAM | DDR4 2666MHz 2x8GB |
 | GPU | Nvidia GTX 1050 (Disabled in SSDT for lack of driver support in mac) |
 | iGPU | Intel UHD Graphics 630 |
-| Storage | ADATA Legend 710 256GB PCIe Gen3x4 m.2 SSD + 1TB Toshiba HDD @5600rps |
+| Storage | SK hynix Gold P31 1TB PCIe NVMe Gen3 M.2 2280 SSD + 1TB Toshiba HDWL110 HDD |
 | Display | 15.6" FHD (1920x1080) LCD |
 | Trackpad | l2C HID Synaptics |
 | Wireless | Intel Wireless-AC AC9560 160MHz w/ Bluetooth |
 | Ethernet | Realtek |
 | Audio | Realtek ALC225 (Layout 30) |
-| OS | macOS Sonoma 14.2.1 + Windows 11 23H2 |
+| OS | macOS Sonoma 14.7.6 + Windows 11 24H2 + Endeavour OS |
 | OpenCore | v1.0.0 |
 
 ## What Works?
 - All USB Ports including Type-C
 - Intel UHD 630 iGPU w/Graphics Accelaration
 - Display w/backlight control
-- WiFi + Bluetooth
+- WiFi
 - LAN
 - Keyboard
 - Keyboard Fn keys
@@ -49,6 +40,7 @@ More about the hackintosh : [Notes](https://hackbook.simple.ink/) & [Setup](http
 - Screen Mirroring
 
 ## What's broken?
+- Bluetooth
 - Nvidia GTX1050 - Lack of driver support in mac
 - HDMI - Connected to the dGPU
 
@@ -56,11 +48,12 @@ More about the hackintosh : [Notes](https://hackbook.simple.ink/) & [Setup](http
 - SD card slot
 
 ## How to do it?
-I have no idea. Tried for weeks and almost gave up, but finally figured out that it was the NVRAM that I didn't reset was causing boot issues for the OpenCore installer. It was done thanks to the mentioned guides, repos and personal support. This is my first hack build. Updated OC and all the kext files to their latest versions. Only problem is that my external audio sometimes add a hum sound when using 3.5mm port but since I use an USB audio adapter, it is ignored.
 
-![image](https://github.com/sameerasw/Nitro5-2018_AN515-52_OpenCore/assets/68902530/872a4242-e48e-473d-b8e1-7c268accb958)
-
+Just as the original Readme, I have no idea. I literally forked the efforts of [sameerasw](https://github.com/sameerasw) from his repo. The hardware of both variants of the AN515-53 and AN515-53 are quite similar, this helped with the compatibility of the EFI files. The first thing to do to make it boot was disable the SecureBootModel, or else it would have a Recovery Reboot. These changes would alllow me to boot Ventura.
+To have Sonoma 14.4+ compatibility, first, updated the AirportItlwm.kext to the corresponding version for Sonoma 14.4+. Also replaced USBPorts.kex with USBToolBox.kext and UTBMap.kext (from Windows I generatedd the UTBMap).
+Currently Bluetooth is broken. I don't use it that much so I may or may not fix it.
 ## Credits and ref
+- [sameerasw's repo](https://github.com/sameerasw/Nitro5-2018_AN515-52_OpenCore)
 - [Thread on tonymacx86.com](https://www.tonymacx86.com/threads/guide-oc-monterey-acer-nitro-5-an515-52-core-i7-8750h-samsung-1tb-960-evo-pcie-nvme.319629/)
 - [Dortanis's guide](https://dortania.github.io/OpenCore-Install-Guide/)
 - [pnapt's repo](https://github.com/pnapt/ACER-Nitro5-AN515-52-Opencore)
