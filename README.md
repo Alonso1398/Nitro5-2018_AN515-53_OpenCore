@@ -1,6 +1,8 @@
 # Nitro5-2018_AN515-53_OpenCore
 My macOS Sonoma OpenCore EFI files and some others. Change SMBIOS serials if you are re-using.<br>
 
+<img width="961" height="1280" alt="image" src="https://github.com/user-attachments/assets/c8a823b9-1ec3-4f52-9783-ebf07c66cd09" />
+
 ## Specs:
 | Component      | Description |
 | ----------- | ----------- |
@@ -18,6 +20,8 @@ My macOS Sonoma OpenCore EFI files and some others. Change SMBIOS serials if you
 | Audio | Realtek ALC225 (Layout 30) |
 | OS | macOS Sonoma 14.7.6 + Windows 11 24H2 + Endeavour OS |
 | OpenCore | v1.0.0 |
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/543e5c1c-0907-4a15-ad14-a3c200279afe" />
 
 ## What Works?
 - All USB Ports including Type-C
